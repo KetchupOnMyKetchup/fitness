@@ -1,0 +1,39 @@
+﻿@model Fitness.Models.Recipe
+
+@{
+    ViewBag.Title = "Recipes";
+}
+
+<h2>Recipe</h2>
+
+<p>
+    @Html.ActionLink("Create New Recipe", "Create")
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Directions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredients)
+        </th>
+    </tr>
+    <tr>
+        <td>
+           @Html.DisplayFor(model => model.Title)
+        </td>
+        <td>
+           @Html.DisplayFor(model => model.Directions)
+        </td>
+        <td>
+           @Html.DisplayFor(model => model.Ingredients)
+        </td>
+    </tr>
+    
+
+</table>
