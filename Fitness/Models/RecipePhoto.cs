@@ -12,18 +12,12 @@ namespace Fitness.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Recipe
+    public partial class RecipePhoto
     {
-        public Recipe()
-        {
-            this.RecipePhotos = new HashSet<RecipePhoto>();
-        }
+        public int RecipePhotoID { get; set; }
+        public string FilePath { get; set; }
+        public int RecipeId { get; set; }
     
-        public int RecipeID { get; set; }
-        public string Title { get; set; }
-        public string Ingredients { get; set; }
-        public string Directions { get; set; }
-    
-        public virtual ICollection<RecipePhoto> RecipePhotos { get; set; }
+        public virtual Recipe Recipe { get; set; }
     }
 }

@@ -8,9 +8,9 @@ namespace Fitness.DAL
     {
         private List<Recipe> _recipes = new List<Recipe>
             {
-                new Recipe() {ID = 1, Title = "Chicken Salad", Directions = "Put lettuce in bowl.\nShred Chicken.\nApply olive oil.", Ingredients = "Lettuce, chicken, olive oil"},
-                new Recipe() {ID = 2, Title = "Salmon Fillet", Directions = "Cut salmon, apply butter.\nSeason and let it soak in.", Ingredients = "Salmon, butter, pepper, salt"},
-                new Recipe() {ID = 3, Title = "Turkey & Cranberry", Directions = "Bake turkey 2 hours.\nApply cranberry sauce.", Ingredients = "Turkey, cranberry"},
+                new Recipe() {Title = "Chicken Salad", Directions = "Put lettuce in bowl.\nShred Chicken.\nApply olive oil.", Ingredients = "Lettuce, chicken, olive oil"},
+                new Recipe() {Title = "Salmon Fillet", Directions = "Cut salmon, apply butter.\nSeason and let it soak in.", Ingredients = "Salmon, butter, pepper, salt"},
+                new Recipe() {Title = "Turkey & Cranberry", Directions = "Bake turkey 2 hours.\nApply cranberry sauce.", Ingredients = "Turkey, cranberry"},
             };
 
         public List<Recipe> Recipes

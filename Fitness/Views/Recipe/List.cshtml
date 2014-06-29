@@ -1,0 +1,38 @@
+﻿@using System.Web.UI.WebControls
+@model IEnumerable<Fitness.Models.Recipe>
+
+@{
+    ViewBag.Title = "Recipe List";
+}
+
+<h2>Recipe List</h2>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredients)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Directions)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredients)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Directions)
+            </td>
+        </tr>
+    }
+</table>
+    

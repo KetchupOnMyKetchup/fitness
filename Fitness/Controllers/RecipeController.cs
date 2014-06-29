@@ -46,6 +46,15 @@ namespace Fitness.Controllers
             }            
         }
 
+        // List
+        public ActionResult List()
+        {
+            IList<Recipe> allRecipes = RecipeService.FindAllRecipes(); 
+
+            return View(allRecipes);
+        }
+
+
         // GET: /Recipe/Details/5
 //        public ActionResult Details(int? id)
 //        {

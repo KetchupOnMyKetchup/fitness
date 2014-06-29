@@ -9,6 +9,13 @@ namespace Fitness.Service
 {
     public class RecipeService : IRecipeService
     {
+        private IRecipeDAL _recipeDAL = new RecipeDAL();
+
+        public IRecipeDAL RecipeDAL
+        {
+            get { return _recipeDAL; }
+            set { _recipeDAL = value;  }
+        } 
 
         /// <summary>
         /// Finds a Recipe by the unique ID
@@ -17,8 +24,7 @@ namespace Fitness.Service
         /// <returns>Recipe with the ID provided, null if not found</returns>
         public Recipe FindRecipeByID(int id)
         {
-            DummyRecipeDAL dummyRecipeDAL = new DummyRecipeDAL();
-            return dummyRecipeDAL.FindRecipeByID(id);
+            return RecipeDAL.FindRecipeByID(id);
         }
 
         /// <summary>
@@ -26,9 +32,8 @@ namespace Fitness.Service
         /// </summary>
         /// <returns>All Recipes in the System.  Will return Empty List if no recipes in the System</returns>
         public IList<Recipe> FindAllRecipes()
-        {
-            DummyRecipeDAL dummyRecipeDAL = new DummyRecipeDAL();
-            return dummyRecipeDAL.FindAllRecipes();
+        {          
+            return RecipeDAL.FindAllRecipes();
         }
 
         /// <summary>
